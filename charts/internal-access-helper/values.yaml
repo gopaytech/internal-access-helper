@@ -8,3 +8,4 @@ imagePullSecrets: []
 
 argoCDNamespace: "argocd"
 argoCDManagerSecretName: "argocd-manager"
+disableFeatures: false

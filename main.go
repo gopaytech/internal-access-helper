@@ -35,9 +35,11 @@ func main() {
 		log.Printf("failed to get namespace %s secret %s: %s\n", settings.ArgoCDNamespace, settings.ArgoCDManagerSecretName, err.Error())
 	}
 
-	argoCDSecret := ArgoCDSecret{
-		CACert: base64.StdEncoding.EncodeToString(secret.Data["ca.crt"]),
-		Token:  base64.StdEncoding.EncodeToString(secret.Data["token"]),
+	argoCDSecret := ArgoCDSecret{}
+
+	if !settings.DisableFeatures {
+		argoCDSecret.CACert = base64.StdEncoding.EncodeToString(secret.Data["ca.crt"])
+		argoCDSecret.Token = base64.StdEncoding.EncodeToString(secret.Data["token"])
 	}
 
 	argoCDSecretByte, err := json.Marshal(argoCDSecret)
@@ -45,7 +47,7 @@ func main() {
 		log.Printf("failed to marshal argoCDSecret")
 	}
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/argocd", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(argoCDSecretByte)
 	})

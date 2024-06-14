@@ -34,5 +34,7 @@ spec:
             value: "{{ .Values.argoCDNamespace }}"
           - name: ARGOCD_MANAGER_SECRET_NAME
             value: "{{ .Values.argoCDManagerSecretName }}"
+          - name: DISABLE_FEATURES
+            value: "{{ .Values.disableFeatures }}"
           - name: HTTP_PORT
             value: "8080"
