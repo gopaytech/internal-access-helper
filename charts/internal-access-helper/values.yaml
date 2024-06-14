@@ -1,0 +1,10 @@
+image:
+  name: "ghcr.io/gopaytech/internal-access-helper"
+  tag: "v1.0.0"
+
+pullPolicy: "Always"
+podLabels: {}
+imagePullSecrets: []
+
+argoCDNamespace: "argocd"
+argoCDManagerSecretName: "argocd-manager"
