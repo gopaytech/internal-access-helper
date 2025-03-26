@@ -9,3 +9,11 @@ imagePullSecrets: []
 argoCDNamespace: "argocd"
 argoCDManagerSecretName: "argocd-manager"
 disableFeatures: false
+
+resources:
+  requests:
+    cpu: 128m
+    memory: 128Mi
+  limits:
+    cpu: 256m
+    memory: 256Mi

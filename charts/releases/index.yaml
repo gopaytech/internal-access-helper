@@ -3,7 +3,22 @@ entries:
   internal-access-helper:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2024-06-15T10:40:03.196602+07:00"
+    created: "2025-03-27T04:19:58.595089+07:00"
+    description: A Helm chart for Kubernetes
+    digest: eb9be82d95e6cdbb685dd49ba2ccd8174d9eb810e52cd48232f1cf4d6d81d246
+    home: https://github.com/gopaytech/internal-access-helper
+    maintainers:
+    - email: zufardhiyaulhaq@gmail.com
+      name: Zufar Dhiyaulhaq
+      url: https://zufardhiyaulhaq.com
+    name: internal-access-helper
+    type: application
+    urls:
+    - internal-access-helper-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2025-03-27T04:19:58.594881+07:00"
     description: A Helm chart for Kubernetes
     digest: 70bbfd6ad25a7623d75492296e79c4c189985508b6df5fa3dfd463802710ade1
     home: https://github.com/gopaytech/internal-access-helper
@@ -18,7 +33,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-06-15T10:40:03.194749+07:00"
+    created: "2025-03-27T04:19:58.594579+07:00"
     description: A Helm chart for Kubernetes
     digest: 2e05dbf354c51b3fb0f6a871487365b47f1aba7592f14263f6b4d2a6498dc3ac
     home: https://github.com/gopaytech/internal-access-helper
@@ -31,4 +46,4 @@ entries:
     urls:
     - internal-access-helper-1.0.0.tgz
     version: 1.0.0
-generated: "2024-06-15T10:40:03.193717+07:00"
+generated: "2025-03-27T04:19:58.59403+07:00"
